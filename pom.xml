@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS PRODUCT CONTAINS RESTRICTED MATERIALS OF IBM 5724-H88, 5724-J08,
+	5724-I63, 5655-W65, COPYRIGHT International Business Machines Corp., 2014
+	All Rights Reserved * Licensed Materials - Property of IBM US Government
+	Users Restricted Rights - Use, duplication or disclosure restricted by GSA
+	ADP Schedule Contract with IBM Corp. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<licenses>
+		<license>
+			<name>IBM International License Agreement for Non-Warranted Programs</name>
+			<url>http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/licenses/L-JTHS-8SZMHX/HTML/</url>
+			<distribution>repo</distribution>
+			<comments>Additional notices http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/maven/licenses/L-JTHS-8SZMHX/HTML/notices.html</comments>
+		</license>
+	</licenses>
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>qwerty</groupId>
+	<artifactId>keycloak-practice</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>keycloak-practice</name>
+	<url>http://maven.apache.org</url>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.keycloak/keycloak-servlet-filter-adapter -->
+		<dependency>
+			<groupId>org.keycloak</groupId>
+			<artifactId>keycloak-servlet-filter-adapter</artifactId>
+			<version>3.4.3.Final</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.name}</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,8 @@
+{
+  "realm": "demo-api",
+  "resource": "sample-test-api",
+  "auth-server-url": "http://hostname:18080/auth",
+  "credentials": {
+    "secret": "2e605837-de63-42e1-b5c7-fdbec3d356a8"
+  }
+}
